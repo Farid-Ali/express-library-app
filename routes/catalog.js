@@ -1,5 +1,5 @@
 var express = require('express');
-var router = express.router();
+var router = express.Router();
 
 //Require controller modules
 var book_controller = require('../controllers/bookController');
@@ -34,7 +34,7 @@ router.post('/book/:id/update', book_controller.book_update_post);
 router.get('/book/:id', book_controller.book_detail);
 
 //GET request for list of all book items
-router.get('/book', book_controller.book_list);
+router.get('/books', book_controller.book_list);
 
 /// AUTHOR ROUTES ///
 
