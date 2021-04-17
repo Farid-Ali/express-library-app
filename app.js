@@ -9,7 +9,7 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
-//setup nongoose collection
+//setup mongoose collection
 var mongoose = require('mongoose');
 var mongoDB = 'mongodb+srv://farid:dontopen0913.@cluster0.xkz9m.mongodb.net/express-library-app?retryWrites=true&w=majority';
 mongoose.connect(mongoDB, { useNewUrlParser: true , useUnifiedTopology: true});
