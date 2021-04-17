@@ -8,12 +8,17 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
+
 //setup nongoose collection
 var mongoose = require('mongoose');
 var mongoDB = 'mongodb+srv://farid:dontopen0913.@cluster0.xkz9m.mongodb.net/express-library-app?retryWrites=true&w=majority';
-mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(mongoDB, { useNewUrlParser: true , useUnifiedTopology: true});
 var db = mongoose.connection;
+db.once('open', function() {
+  console.log("MongoDB database connection established successfully");
+});
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
