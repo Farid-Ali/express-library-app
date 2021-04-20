@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('./partials/head', {title: title}); %>
+  </head>
+  <body>
+    <%- include('./partials/sidebarNav'); %>
+    <div class="col-sm-10">
+      <h1><%= title %></h1>
+      <ul>
+        <% genre_list.forEach( genre => { %>
+          <li>
+            <a href="<%= genre.url %>"><%= genre.name %></a>
+          </li>
+        <% }); %>
+      </ul>
+    </div>
+  </body>
+</html>
