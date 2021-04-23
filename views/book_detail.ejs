@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('./partials/head', {title: title}); %>
+  </head>
+  <body>
+    <%- include('./partials/sidebarNav'); %>
+    <div>
+      <h1>Title: <%= book.title %></h1>
+      <h3>Author: <%= book.author.name %></h3>
+    </div>
+  </body>
+</html>
