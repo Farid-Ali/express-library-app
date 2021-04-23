@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('./partials/head', {title: title}); %>
+  </head>
+  <body>
+    <%- include('./partials/sidebarNav'); %>
+    <div class="col-sm-10">
+        <h1>ID: <%= bookinstance._id %></h1>
+        <p><strong>Title: </strong><a href="<%= bookinstance.book.url %>"><%= bookinstance.book.title %></a></p><br>
+        <p><strong>Imprint: </strong><%= bookinstance.imprint %></p>
+    </div>
+  </body>
+</html>
