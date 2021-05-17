@@ -12,7 +12,7 @@ var app = express();
 
 //setup mongoose collection
 var mongoose = require('mongoose');
-var mongoDB = 'mongodb+srv://farid:dontopen0913.@cluster0.xkz9m.mongodb.net/express-library-app?retryWrites=true&w=majority';
+var mongoDB = process.env.DB_URL;
 mongoose.connect(mongoDB, { useNewUrlParser: true , useUnifiedTopology: true});
 var db = mongoose.connection;
 db.once('open', function() {
